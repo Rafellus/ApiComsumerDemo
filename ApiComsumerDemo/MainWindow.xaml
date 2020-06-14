@@ -1,0 +1,30 @@
+﻿<Window x:Class="ApiComsumerDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ApiComsumerDemo"
+        mc:Ignorable="d" FontSize="14" Loaded="Window_Loaded"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="previousImageButton" Padding="15" Margin="15" Content="Previous" Click="previousImageButton_Click"/>
+            <Button x:Name="sunInformationButton" Padding="15" Margin="15" Content="Sun Information" Click="sunInformationButton_Click"/>
+            <Button x:Name="nextImageButton" Padding="15" Margin="15" Content="Next" Click="nextImageButton_Click"/>
+        </StackPanel>
+
+        <Image Grid.Column="1" Grid.Row="2" x:Name="comicImage" Margin="20"/>
+    </Grid>
+</Window>
